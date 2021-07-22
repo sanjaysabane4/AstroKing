@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Astro King</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-warning" href="index.html">AstroKing</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Rashial
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="dailyrashifal.html">Daily Rashifal</a></li>
+                            <li><a class="dropdown-item" href="weeklyrashifal.html">Weekly Rashial</a></li>
+                            <li><a class="dropdown-item" href="monthlyrashifal.html">Monthly Rashifal</a></li>
+                            <li><a class="dropdown-item" href="yearlyrashifal.html">Yearly Rashial</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="support.html">Support</a></li>
+                            <li><a class="dropdown-item" href="writeforus.html">Write For Us</a></li>
+
+                        </ul>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">ContactUs</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+
+                <div class="mx-2">
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
+                </div>
+
+                <div>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#signupModal">SignUp</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to astro king</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                            <input type="email" class="form-control form-select-sm" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputpassword" class="form-label">Enter Password</label>
+                            <input type="password" class="form-control form-select-sm" id="exampleInputpassword"
+                                aria-describedby="emailHelp">
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+
+                    </form>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SignUp Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Get an astro king account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail2" class="form-label">Email Address</label>
+                            <input type="email" class="form-control form-select-sm" id="exampleInputEmail2"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputpassword1" class="form-label">Enter Password</label>
+                            <input type="password" class="form-control form-select-sm" id="exampleInputpassword1">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cexampleInputpassword2" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control form-select-sm" id="cexampleInputpassword2">
+                        </div>
+
+                    </form>
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="ui-sign-content-box">
+            <h1 class="text-center">Yearly Aquarius Horoscope</h1>
+            <div class="text-muted"><b>Year 1997</b></div>
+            <h2 id="General">General</h2>
+            <p>This month is going to be average for Sagittarius natives. You need to be careful and alert this month.
+                There may be some hurdles in functioning properly, but your competitive ability will open the doors of
+                success for you. There can also be differences with friends, so be as sweet as you can. This month you
+                may have to face uncomfortable situations due to your bitter speech. <br>
+                Bring pleasantness to speech, otherwise friends and family may get hurt. Avoid speaking a lot. Do not
+                utter a single word unnecessarily. This month can also be frustrating for students. You may remain
+                distracted. There may be obstacles in your path. Time will be pleasant for those who wish to study
+                abroad. You will also need to reconcile in family life. If you can keep a tab on your speech, you will
+                be in bliss, otherwise you will suffer along with your family members. <br>
+                You may have to stay away from your home for a while. Married life can be challenging. There may be a
+                situation of conflict with a spouse even on trivial matters. This thing can go out of the house and
+                reach the in-laws and there can be a dispute with the in-laws. Do not let such a situation aggravate.
+                Love relationships can be fun, but avoid abusive behavior. This can cause sourness in relationships.
+                <br>
+                One can also get the pleasure of going on a long journey with his/her beloved. From an economic
+                perspective, this month can be troublesome for you. There will be a tendency to spend more than what is
+                expected. Avoid extravagance, otherwise there is every possibility of getting into a debt. This month
+                should be very cautious from the health point of view. Be very alert while walking on roads as you can
+                fall prey to an injury. <br>
+            </p>
+            <h2 id="Career">Career</h2>
+            <p>Speaking from the point of view of profession and career, this month is likely to be full of ups and
+                downs for you. Mercury, the lord of the tenth house, is conjuncted with Rahu in the sixth house.
+                However, in many cases this situation can also be said to be beneficial for the employed people. <br>
+                Especially for those with performance pressure or the ones who have to meet the target of the month.
+                Such people can beat their opponents in the competition, but the number of your opponents will also
+                increase at the same time. Closed ones may also turn out to be hostile. However, eventually you will
+                also be able to overcome them. The situation will change after the 7th. The situation will become more
+                favorable. <br>
+                Time will be good for business ventures. The first half may be particularly beneficial for you. The Sun
+                will change zodiac signs on the 16th and move into your eighth house. This is likely to increase your
+                challenges. During this time, you may have a tendency to do something illegal. There may be shortcuts or
+                suggestions of taking the wrong route for profit, but you have to stay away from them. <br>
+                Doing any such act against the law can prove very harmful for you. More damage is to come your way than
+                expected. So, stay alert. It is important to avoid government tax evasion, otherwise it can cost you
+                dearly.<br>
+            </p>
+            <h2 id="Finance">Finance</h2>
+            <p>From an economic perspective, this month can prove to be weak for you. Both Venus and Mars will be in the
+                eighth house in the first half of the month. You will have a tendency to spend unnecessarily. You can
+                spend your money and can also find yourself in debt. Some hidden expenses are possible, due to which the
+                financial situation is in danger of being ruined. <br>
+                Avoid taking loans, as you will not be able to repay it in the near future. So be careful. Do not spend
+                money unnecessarily. Make financial decisions in consultation with a well-wisher. Consult with more than
+                one person. It is possible for the economic situation to improve after the 20th. Mars will change signs
+                and it will move into the house of luck. You can get any stagnant money and it can support your
+                financial situation extremely. <br>
+                Due to the presence of Saturn in the second house, there will be success making gradual savings. You can
+                invest in some schemes to save money a little bit. By the end of the month, good business income will
+                get generated. Money may start flowing into your hands. Accumulation of wealth will also be possible.
+                This will boost your confidence.<br>
+            </p>
+            <h2 id="Health">Health</h2>
+            <p>This month is going to be weak from the health point of view. Special caution is required for you.
+                Mercury and Rahu in the sixth house and Sun in the seventh house and Venus and Mars in the eighth house,
+                and the aspection of Saturn on them is a condition that weakens your health. <br>
+                Although there will be obstacles in health, your ability to combat diseases will also increase. The
+                disease will not be able to last long or cause much trouble. Blood disorders are possible. If there is
+                already a blood disease, then you need to be cautious. <br>
+                There is a possibility of injuries occurring. Drive vehicles etc. very carefully. Be especially careful
+                while walking on the road. You do not have to make any compromises on road safety. The transit of Mars
+                on the 20th is likely to bring some relief, but caution should not be reduced.<br>
+            </p>
+            <h2 id="Love/Marriage/Personal Relations">Love/Marriage/Personal Relations</h2>
+            <p>For those who are in a love relationship, time will be full of fun and happiness. The closeness with your
+                beloved will increase. The presence of Venus and Mars in the eighth house is indicative of an increase
+                in intimate relationships. You will spend a lot of time with your sweetheart, but your lover also
+                expects decent behavior from you. You may show a special interest in uninteresting things, due to which
+                there is a possibility of tension sparking up in the relationship. <br>
+                Take care of your partner's respect and desire, then the time will be very enjoyable. On 20th, Mars will
+                change zodiac signs and it will transit in the ninth house. This can lead to a travel expedition with
+                the beloved. You can also go on a long journey or travel abroad. For married natives, the presence of
+                the Sun in the seventh house can be a challenge for the relationship. <br>
+                There will be fierceness in your nature. Small things, which could have been ignored, can also possibly
+                spark things with your spouse. There will be a tendency to dominate each other and this is expected to
+                cause trouble. Be soft in nature. The latter half of the month may prove to be more troublesome. On the
+                16th, the Sun will transit in the eighth house. <br>
+                This allows mutual quarrels of the house to reach the in-laws. Relations with in-laws will be affected.
+                Spouse may also have some health related problems which is why caution is required on your part. <br>
+            </p>
+            <h2 id="Family &amp; Friends">Family &amp; Friends</h2>
+            <p>If seen from the perspective of domestic happiness and bliss, then this month will be mildly fruitful for
+                you. Saturn is sitting in the second house, from where it is also aspecting the fourth house. This is
+                how it is influencing both family and familial happiness, although he is sitting in its own zodiac sign.
+                <br>
+                Mars' presence is also seen on the second house. What would be the effect of two inauspicious planets on
+                the second house? Due to this, there will be a situation of fluctuation in family life. Distance from
+                family is possible due to remaining busy at work. You may have to stay away from home and family due to
+                travel, work etc. You will develop a tendency to speak clear but bitter. This can cause bitterness in
+                your relationships. You need to be very cautious in this direction. <br>
+                Think before you speak, because people are likely to get hurt because of you, and you may end up hurting
+                their self-esteem. This can also cause bitterness in relations. You should be as silent as possible.
+                Avoid giving opinions on a subject without knowing it, otherwise you may get hurt. Siblings are expected
+                to benefit. Financial assistance from their side is also possible if needed. There is a need to be
+                vigilant about the health of your mother, as she may face some troubles. <br>
+            </p>
+            <h2 id="Advice">Advice</h2>
+            <p>Offer Arghya to Lord Sun from a Copper vessel and also recite the Aditya Hriday Strotam regularly. <br>
+                Tie Raw Turmeric covered in a yellow thread on the right arm.<br>
+                Apply Kesar Tilak for 27 Thursdays and keep a small packet of Kesar or Saffron covered in a
+                yellow-coloured cloth or paper with you.<br>
+                Chant the mantra: ॐ नमो भगवते वासुदेवाय/oṃ namo bhagavate vāsudevāya".</p>
+            <br>
+        </div>
+    </div>
+
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2020–2021 Astro King Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

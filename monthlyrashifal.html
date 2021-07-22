@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Astro King</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-warning" href="index.html">AstroKing</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Rashial
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="dailyrashifal.html">Daily Rashifal</a></li>
+                            <li><a class="dropdown-item" href="weeklyrashifal.html">Weekly Rashial</a></li>
+                            <li><a class="dropdown-item" href="monthlyrashifal.html">Monthly Rashifal</a></li>
+                            <li><a class="dropdown-item" href="yearlyrashifal.html">Yearly Rashial</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="support.html">Support</a></li>
+                            <li><a class="dropdown-item" href="writeforus.html">Write For Us</a></li>
+
+                        </ul>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">ContactUs</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+
+                <div class="mx-2">
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
+                </div>
+
+                <div>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#signupModal">SignUp</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to astro king</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                            <input type="email" class="form-control form-select-sm" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputpassword" class="form-label">Enter Password</label>
+                            <input type="password" class="form-control form-select-sm" id="exampleInputpassword"
+                                aria-describedby="emailHelp">
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+
+                    </form>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SignUp Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Get an astro king account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail2" class="form-label">Email Address</label>
+                            <input type="email" class="form-control form-select-sm" id="exampleInputEmail2"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputpassword1" class="form-label">Enter Password</label>
+                            <input type="password" class="form-control form-select-sm" id="exampleInputpassword1">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cexampleInputpassword2" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control form-select-sm" id="cexampleInputpassword2">
+                        </div>
+
+                    </form>
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="ui-sign-content-box">
+            <h1 class="text-center">Monthly Aquarius Horoscope</h1>
+            <div class="text-muted"><b>September 1997</b></div>
+            <h2 id="General">General</h2>
+            <p>The month of July can be expected to be better than average for Aquarius natives. The beginning of the
+                month will be a bit slow in terms of functioning. Business can keep your mind upbeat. There will be
+                laziness and confusion. Employed people need to be mindful of their work. The tendency to make excuses
+                has to be left, otherwise you may get into troubles. <br>
+                Conditions will begin to improve in the second half of the month. You will get involved in business and
+                you will gradually become conscious of your work. Make business / business related decisions in the
+                second half. Additional caution is needed. From the point of view of academics, this month will bring in
+                mixed results. The Sun will remain in the fifth house in the first half of the month, due to being very
+                full of energy, the mind can get distracted from studies. Your mind will run after new things. <br>
+                The period is favourable for competitive exams. However, the latter half of the month will prove to be
+                beneficial for students. Those who desire to study abroad need more efforts on their part now. From the
+                point of view of family happiness, this month will have mixed results for you. Do not be indifferent to
+                family responsibilities. However, in the second half of the month, your sense of responsibility will
+                increase. There will be full cooperation of brothers and sisters. <br>
+                The natives who have a love affair need to be a little restrained at the beginning of the month.
+                Inculcate sweetness to your speech and do not try to dominate each other, it can cause distress.
+                However, things will get better very soon. The bitterness of relationships will disappear. Communication
+                with each other will be better. Proximity will increase. The month of July is going to be enjoyable for
+                married natives. There will be a lot of sweetness in your relationship with your spouse. <br>
+                The first half of the month is going to be better in terms of income from work. There will be a lot of
+                income flowing into your hands. There will be special benefits from the cooperation of the
+                administration. Sources of income will remain constant in the latter half, but expenditures may also
+                increase. There may be a long distance journey etc. The month is going to be positive from the health
+                point of view.<br>
+            </p>
+            <h2 id="Career">Career</h2>
+            <p>From the point of view of career and work, July is going to be full of ups and downs. The presence of
+                Ketu in the tenth house is likely to disturb the work space. You will have a hard time concentrating at
+                work. The mind will remain alert and new things will keep ushering into the mind. New ideas will not let
+                you focus on anything. <br>
+                Employed people may have to face the resentment of their superiors in the office. Sun's presence in the
+                fifth house is also indicative of a change in job. Employed people need to put their mind and heart into
+                work, otherwise senior officers may remain displeased with you. By moving into the sixth house of the
+                Sun on the 16th, you can be successful in conquering the troubles of your workspace. <br>
+                Time will improve gradually. It will be a good time from the business point of view. The first half of
+                the month will be better in terms of business. You can succeed in making good deals in business. The
+                latter is a time to take a little care. In the latter half, business decisions will need to be made very
+                carefully and carefully. Keep note of all the transactions being made.<br>
+            </p>
+            <h2 id="Finance">Finance</h2>
+            <p>From the economic point of view, the month of July will be beneficial with some fluctuations. In the
+                first half of the month, the Sun will be on the eleventh house. This situation is very beneficial for
+                your income, which will increase. If your business is connected to the government sector, then there can
+                be huge profit opportunities. With the help of governance and administration, new income opportunities
+                can be opened. Time will be favorable for people with government jobs. <br>
+                Your influence will increase. The first half of the month will be more favorable for earning profits in
+                business. The latter half of the month can be a bit troublesome. Due to the transit of the Sun in the
+                sixth house on the 16th, there will not be a favorable situation in terms of income, as it was in the
+                first half. Nevertheless, you will not let your opponents dominate you. <br>
+                There may be an increase in workload. One may go on a farfaraway journey in connection with business and
+                it will be profitable. Mercury moving into the fifth house shows signs of good gains from business
+                travel. Sources of income will remain stable, but expenses will also increase. Your energy will also be
+                spent in dealing with opponents.<br>
+            </p>
+            <h2 id="Health">Health</h2>
+            <p>From the health point of view, the month of July is going to be normal. There is no possibility of any
+                major problem occuring. The presence of Saturn in the twelfth house and the presence of Mars and Venus
+                in the sixth house may cause some discomfort in the legs. <br>
+                Insomnia, eye disorders and irregular blood pressure can trouble you. If you are already suffering from
+                these diseases, then take your medicines on time. If you take care of food and exercise, then you can
+                easily overcome them.<br>
+            </p>
+            <h2 id="Love/Marriage/Personal Relations">Love/Marriage/Personal Relations</h2>
+            <p>The month of July can be full of ups and downs for love affairs. Sun will be present in the fifth house
+                in the first half of the month. This may lead to lack of cohesion in mutual relations. The tendency to
+                dominate each other can cause tension in relationships. A communication gap or colloquial closure may
+                also occur. <br>
+                However, after the transit of Mercury in the fifth house from the 7th, the mutual tension will go away.
+                The state of communication gap will end. There will be efforts made from both sides to understand each
+                other, then the relationship will become smooth again. <br>
+                Attitude towards each other will improve. On the 16th, Sun will change zodiac signs and they will move
+                into the sixth house. This can lead to more intensification in love affairs. Mercury being alone in the
+                fifth house will be good for love life. Mercury alone will strengthen mutual communication with your
+                beloved. There will be a chance to get close to each other. You can get opportunities to hang out with
+                your sweetheart. <br>
+                The month of July is going to be very enjoyable for married natives. Jupiter is present in the seventh
+                house, which is very good for your married life. The relationship with your spouse will increase in
+                intensity and sweetness will prevail. There will be a feeling of trust and cooperation towards each
+                other. For unmarried people, marriage is on the cards.<br>
+            </p>
+            <h2 id="Family &amp; Friends">Family &amp; Friends</h2>
+            <p>From the point of view of household and family happiness, the month of July can prove to give mixed
+                results. The presence of Rahu and Mercury in the fourth house will result in mixed results in family
+                life. Sometimes the situations will be very enjoyable, sometimes very dull. <br>
+                There will be an opportunity to spend time with family. New plans will also be made, but people will not
+                take your ideas seriously, and it may hurt you. The mind can get upset and feel depressed. Saturn
+                sitting in the second house is giving it's third aspection to the house of family members, that is, the
+                second house. This may cause estrangement or disagreement with family members about something. You can
+                remain dissatisfied with certain things about your family members. <br>
+                You can feel yourself being forced to make decisions. It is possible for your mother's health to
+                decline. When Mercury changes its zodiac sign on 7th, it will be possible to improve the situation.
+                There may be some concern or some problem with younger siblings. Once Mars enters the Leo zodiac on the
+                20th, there will be harmony in the relationship once again. The prevalent communication gap will end,
+                along with the differences. Your proximity will also increase.<br>
+            </p>
+            <h2 id="Advice">Advice</h2>
+            <p>It would be beneficial to recite the Surya Ashtak everyday. <br>
+                Perform Chaya Daan, that is, pour a little mustard oil in the bowl and donate it.<br>
+                Behave well with those who are blind, handicapped, servants and cleaning workers.<br>
+                Refrain from maintaining a relationship with any woman other than your partner/spouse.<br>
+            </p>
+            <br>
+        </div>
+    </div>
+
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2020–2021 Astro King Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
